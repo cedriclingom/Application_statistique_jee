@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19637c50-dc6a-4966-8d18-6ffe7db6e066" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fron-end/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fron-end/events/statistiques.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fron-end/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fron-end/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fron-end/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/fron-end/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/webService/UserRestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/build/classes/webService/UserRestService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/webService/UserRestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/webService/UserRestService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +17,7 @@
     <session id="-994622778">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="1" />
@@ -26,37 +26,50 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="2" />
+          <entry key="html" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="2" />
+          <entry key="HTML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="171" />
+          <entry key="html" value="896" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="171" />
+          <entry key="HTML" value="896" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fron-end/events/events_list.html">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-198">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fron-end/authentification/sign_up.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="669">
+              <caret line="111" column="48" lean-forward="true" selection-start-line="111" selection-start-column="48" selection-end-line="111" selection-end-column="48" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fron-end/events/statistiques.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="839">
+            <state relative-caret-position="1343">
               <caret line="79" column="7" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
             </state>
           </provider>
@@ -72,6 +85,7 @@
       <list>
         <option value="$PROJECT_DIR$/fron-end/events/events_list.html" />
         <option value="$PROJECT_DIR$/fron-end/events/statistiques.html" />
+        <option value="$PROJECT_DIR$/fron-end/authentification/sign_up.html" />
       </list>
     </option>
   </component>
@@ -91,7 +105,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -108,12 +121,19 @@
               <item name="Application_statistique_jee" type="b2602c69:ProjectViewProjectNode" />
               <item name="Application_statistique_jee" type="462c0819:PsiDirectoryNode" />
               <item name="fron-end" type="462c0819:PsiDirectoryNode" />
+              <item name="authentification" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Application_statistique_jee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Application_statistique_jee" type="462c0819:PsiDirectoryNode" />
+              <item name="fron-end" type="462c0819:PsiDirectoryNode" />
               <item name="events" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -163,17 +183,18 @@
       <updated>1551542493072</updated>
       <workItem from="1551542494689" duration="1593000" />
       <workItem from="1551709004762" duration="11000" />
-      <workItem from="1553434777513" duration="924000" />
+      <workItem from="1553434777513" duration="13167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2528000" />
+    <option name="totallyTimeSpent" value="18079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.123667374" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12473348" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -201,15 +222,33 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/fron-end/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="49" column="50" lean-forward="true" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fron-end/events/statistiques.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="839">
+        <state relative-caret-position="1343">
           <caret line="79" column="7" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fron-end/events/events_list.html">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fron-end/authentification/sign_up.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="669">
+          <caret line="111" column="48" lean-forward="true" selection-start-line="111" selection-start-column="48" selection-end-line="111" selection-end-column="48" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
