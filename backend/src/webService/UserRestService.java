@@ -8,8 +8,8 @@ import javax.ws.rs.GET;
 import javax.ws.rs.PATCH;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -29,9 +29,9 @@ public class UserRestService extends Application{
 	
 	
 	@GET
-	@Path("/infos")
+	@Path("/infos/{email}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public User getUserInfos(@QueryParam("email")String email) {
+	public User getUserInfos(@PathParam("email")String email) {
 		
 		return userDao.getUserInfos(email);
 		
@@ -49,10 +49,10 @@ public class UserRestService extends Application{
 	}
 	
 	@PATCH
-	@Path("/registration")
+	@Path("/registration/{email}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_HTML)
-	public Response updateUser(User user, @QueryParam("email")String email) {
+	public Response updateUser(User user, @PathParam("email")String email) {
 				
 		return userDao.updateUser(user, email);
 		
