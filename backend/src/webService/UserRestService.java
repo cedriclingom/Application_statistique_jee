@@ -42,7 +42,7 @@ public class UserRestService extends Application{
 	@POST
 	@Path("/registration")
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.TEXT_HTML)
+	@Produces(MediaType.APPLICATION_JSON)
 	public Response registerUser(User user) {
 		 
 		return userDao.saveUser(user);
@@ -52,7 +52,7 @@ public class UserRestService extends Application{
 	@PATCH
 	@Path("/registration/{email}")
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.TEXT_HTML)
+	@Produces(MediaType.APPLICATION_JSON)
 	public Response updateUser(User user, @PathParam("email")String email) {
 				
 		return userDao.updateUser(user, email);
@@ -65,7 +65,7 @@ public class UserRestService extends Application{
 	@POST
 	@Path("/login")
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.TEXT_HTML)
+	@Produces(MediaType.APPLICATION_JSON)
 	public Response logInUser(User user) {
 		
 		return userDao.loginUser(user);
@@ -74,7 +74,7 @@ public class UserRestService extends Application{
 	@POST
 	@Path("/logout")
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.TEXT_HTML)
+	@Produces(MediaType.APPLICATION_JSON)
 	public Response logOutUser(User user) {
 		
 		return userDao.logOutUser(user);

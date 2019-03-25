@@ -1,7 +1,5 @@
 package webService;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.ejb.EJB;
 import javax.ws.rs.ApplicationPath;
@@ -14,7 +12,7 @@ import javax.ws.rs.core.MediaType;
 
 
 import dao.IEventDao;
-import model.Event;
+
 
 
 

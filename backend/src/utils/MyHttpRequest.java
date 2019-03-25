@@ -43,13 +43,15 @@ public class MyHttpRequest {
 		
 		initConnection(url);
 		connection.setUseCaches(false);
-		//connection.setDoInput(true);
-	    //connection.setDoOutput(true);
+		
 		
 	}
+	@SuppressWarnings("unused")
 	private void sendRequest() throws IOException {
 		
 		//Send request
+		//connection.setDoInput(true);
+	    //connection.setDoOutput(true);
 	    DataOutputStream wr = new DataOutputStream (connection.getOutputStream());
 	    wr.close();
 	    wr.close();

@@ -39,12 +39,12 @@
                     <form>
                         <div class="form-group">
                             <label>Your email</label>
-                            <input name="" class="form-control" placeholder="Email" type="email">
+                            <input id="signIn-email" name="" class="form-control" placeholder="Email" type="email">
                         </div> <!-- form-group// -->
                         <div class="form-group">
                             <a class="float-right" href="#">Forgot?</a>
                             <label>Your password</label>
-                            <input class="form-control" placeholder="******" type="password">
+                            <input id="signIn-password"class="form-control" placeholder="******" type="password">
                         </div> <!-- form-group// -->
                         <div class="form-group">
                             <div class="checkbox">
@@ -52,7 +52,7 @@
                             </div> <!-- checkbox .// -->
                         </div> <!-- form-group// -->
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block"> Login  </button>
+                            <button onclick="sign_in()" class="btn btn-primary btn-block"> Login  </button>
                         </div> <!-- form-group// -->
                     </form>
                 </article>
@@ -66,6 +66,31 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script>
+    function sign_in() {
 
+            var email = document.getElementById("signIn-email").value;
+            var password = document.getElementById("signIn-password").value;
+
+            var url = "http://localhost:8080/backend_statistique/user/login";
+            var sign_up_form = JSON.stringify({"email": email , "textPassword": password});
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: sign_up_form,
+                success: function(result){
+                    console.log(result.response.toString());
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                },
+                dataType: "json",
+                contentType : "application/json"
+            });
+    }
+</script>
 </body>
 </html>

@@ -2,16 +2,14 @@ package dao;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.List;
+
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 
-import model.Event;
+
 import utils.MyHttpRequest;
 
 @Stateless

@@ -95,7 +95,7 @@
             var email = document.getElementById("email").value;
             var no ="no";
 
-            var url = "http://localhost:8080/backend_statistique/statistics/user/registration";
+            var url = "http://localhost:8080/backend_statistique/user/registration";
             var sign_up_form = JSON.stringify({firstName: firstname ,lastName : last_name , email: email , textPassword: password , active: no});
 
             $.ajax({
@@ -103,10 +103,11 @@
                 url: url,
                 data: sign_up_form,
                 success: function(result){
+                    alert(result.response);
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
-                    // alert(xhr.status);
-                    // alert(thrownError);
+                    alert(xhr.status);
+                    alert(thrownError);
                 },
                 dataType: "json",
                 contentType : "application/json"
