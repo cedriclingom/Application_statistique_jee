@@ -10,6 +10,7 @@ import javax.ejb.Local;
 @Local
 public interface IEventDao {
 	
-	public String getEvents(int id);
+	public String getEvents();
+	public String getEventTypeNameNbParticipations();
 
 }

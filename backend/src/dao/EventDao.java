@@ -21,14 +21,13 @@ public class EventDao implements IEventDao{
 	
 
 	@Override
-	public String getEvents(int id) {
+	public String getEvents() {
 		
 		String response = null;
 		
 		try {
 			
-				StringBuilder stringBuilder = new StringBuilder("http://localhost:8080/backend_calendrier/eventUser/");
-		        stringBuilder.append(id);
+				StringBuilder stringBuilder = new StringBuilder("http://localhost:8080/backend_calendrier/events");
 		        URL url = new URL(stringBuilder.toString());
 		        MyHttpRequest myHttpRequest = new MyHttpRequest();
 		        response = myHttpRequest.doGet(url);
@@ -40,6 +39,27 @@ public class EventDao implements IEventDao{
 			System.out.println("Pb de requête!");
 		}
 		return response;
+	}
+	@Override
+	public String getEventTypeNameNbParticipations() {
+		
+String response = null;
+		
+		try {
+			
+				StringBuilder stringBuilder = new StringBuilder("http://localhost:8080/backend_calendrier/eventTypes");
+		        URL url = new URL(stringBuilder.toString());
+		        MyHttpRequest myHttpRequest = new MyHttpRequest();
+		        response = myHttpRequest.doGet(url);
+		        
+		} catch (MalformedURLException e) {
+			
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Pb de requête!");
+		}
+		return response;
+		
 	}
 
 }
