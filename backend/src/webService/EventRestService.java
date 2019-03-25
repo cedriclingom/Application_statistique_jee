@@ -18,7 +18,7 @@ import model.Event;
 
 
 
-@ApplicationPath("/calendar")
+@ApplicationPath("/")
 @Path("/event")
 public class EventRestService extends Application{
 	
@@ -29,7 +29,7 @@ public class EventRestService extends Application{
 	@GET
 	@Path("{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<Event> getEvents(@PathParam("id")int id) {
+	public String getEvents(@PathParam("id")int id) {
 		
 		return eventDao.getEvents(id);
 	}

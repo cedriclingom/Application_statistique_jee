@@ -10,6 +10,6 @@ import model.Event;
 @Local
 public interface IEventDao {
 	
-	public List<Event> getEvents(int id);
+	public String getEvents(int id);
 
 }

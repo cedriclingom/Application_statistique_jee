@@ -55,10 +55,11 @@ public class MyHttpRequest {
 	    wr.close();
 	}
 	
-	@SuppressWarnings("unused")
-	private void getResponse() throws IOException {
-			System.out.println(connection.getRequestMethod());
-		/*InputStream is = connection.getInputStream();
+
+	private String getResponse() throws IOException {
+		
+		System.out.println(connection.getRequestMethod());
+		InputStream is = connection.getInputStream();
 	    BufferedReader rd = new BufferedReader(new InputStreamReader(is));
 	    String line;
 	    StringBuffer response = new StringBuffer(); 
@@ -67,7 +68,7 @@ public class MyHttpRequest {
 	      response.append('\r');
 	    }
 	    rd.close();
-	    System.out.println(response.toString());*/
+	    return response.toString();
 	}
 	
 	private void deconnexion() {
@@ -81,15 +82,14 @@ public class MyHttpRequest {
 	}
 	
 	
-	public void doGet(URL url) {
+	public String doGet(URL url) {
+		
+		String response = null;
 		
 		try {
 			
 			createConnection(url);
-			//connection.setRequestMethod("GET");
-			System.out.println(connection.getRequestMethod());
-			sendRequest();
-			getResponse();
+			response = getResponse();
 			
 		}catch(Exception e){
 			
@@ -98,7 +98,9 @@ public class MyHttpRequest {
 		}finally {
 			
 			deconnexion();
+			
 		}
+		return response;
 		
 	}
 	

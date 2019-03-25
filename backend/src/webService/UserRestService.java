@@ -20,7 +20,7 @@ import entities.User;
 
 
 
-@ApplicationPath("/statistics")
+@ApplicationPath("/")
 @Path("/user")
 public class UserRestService extends Application{
 	
