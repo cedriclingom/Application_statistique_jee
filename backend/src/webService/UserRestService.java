@@ -22,6 +22,7 @@ import entities.User;
 
 @ApplicationPath("/")
 @Path("/user")
+
 public class UserRestService extends Application{
 	
 	@EJB
