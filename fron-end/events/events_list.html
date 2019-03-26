@@ -32,8 +32,8 @@
 <div class="mt-5">
     <div class="" >
         <div class="btn-group col-lg-4 offset-lg-4" role="group" aria-label="Basic example">
-            <a type="button" class="col-lg-6 btn btn-secondary active">Evenements</a>
-            <a type="button" class="col-lg-6 btn btn-secondary" href="statistiques.html">Statistiques</a>
+            <a onclick="event_types()" type="button" class="col-lg-6 btn btn-secondary active">Evenements</a>
+            <a onclick="event_types()" type="button" class="col-lg-6 btn btn-secondary" href="statistiques.html">Statistiques</a>
         </div>
     </div>
 
@@ -87,7 +87,9 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js" ></script>
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script>
+
     $(document).ready(function() {
         var tbody_events = document.getElementById('tbody_events');
         var events = [
@@ -123,7 +125,30 @@
         }
         $('#events_list').DataTable();
     } );
-
+    //
+    // function event_types() {
+    //
+    //     var url = "http://localhost:8080/backend_statistique/event/1";
+    //
+    //     $.ajax({
+    //         type: "GET",
+    //         url: url,
+    //         success: function(result){
+    //             console.log(result[0].title.toString());
+    //         },
+    //         error: function (xhr, ajaxOptions, thrownError) {
+    //             alert(xhr.status);
+    //             alert(thrownError);
+    //         },
+    //         dataType: "json",
+    //         contentType : "application/json"
+    //     });
+    // }
+</script>
+<script>
+    // $(document).ready(function() {
+    //     $('#events_list').DataTable();
+    // } );
 </script>
 </body>
 </html>

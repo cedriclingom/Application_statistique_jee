@@ -30,7 +30,7 @@ public class UserDao implements IUserDao{
 
 	public Response saveUser(User user) {
 		
-		Response response = Response.ok("Created").build();
+		Response response = Response.ok("{\r\"response\":\"Created\"\r}").build();
 		
 		if(getUserByEmail(user.getEmail()) == null) {
 			
@@ -40,13 +40,13 @@ public class UserDao implements IUserDao{
 				
 			}catch(Exception e) {
 				
-				response = Response.ok("Not Created").build();
+				response = Response.ok("{\r\"response\":\"Not Created\"\r}").build();
 				
 			}
 			
 		}else {
 			
-			response = Response.ok("Already Created").build();
+			response = Response.ok("{\r\"response\":\"Already Created\"\r}").build();
 		}
 		
 		return response;		
@@ -64,11 +64,11 @@ public class UserDao implements IUserDao{
 			
 			findUser.setFirstName(user.getFirstName());
 			findUser.setLastName(user.getLastName());
-			response = Response.ok("Modified").build();
+			response = Response.ok("{\r\"response\":\"Modified\"\r}").build();
 			
 		}else {
 			
-			response = Response.ok("user not found").build();
+			response = Response.ok("{\r\"response\":\"user not found\"\r}").build();
 			
 		}
 			
@@ -85,30 +85,30 @@ public class UserDao implements IUserDao{
 		
 		if((user == null) || (user.getEmail() == null && user.getTextPassword() == null)) {
 			
-			response = Response.ok("Missing email and password").build();
+			response = Response.ok("{\r\"response\":\"Missing email and password\"\r}").build();
 			
 		}else if(user.getEmail() == null){
 			
-			response = Response.ok("Missing email").build();
+			response = Response.ok("{\r\"response\":\"Missing email\"\r}").build();
 			
 		}else if (user.getTextPassword() == null) {
 			
-			response = Response.ok("Missing password").build();
+			response = Response.ok("{\r\"response\":\"Missing password\"\r}").build();
 			
 		}else if(getUserByEmail(user.getEmail()) == null) {
 			
-			response = Response.ok("user not found").build();
+			response = Response.ok("{\r\"response\":\"user not found\"\r}").build();
 			
 		}else {
 			
 			findUser = getUserByEmail(user.getEmail());			
 			if(!findUser.getTextPassword().equals(user.getTextPassword())) {
 				
-				response = Response.ok("wrong password").build();
+				response = Response.ok("{\r\"response\":\"wrong password\"\r}").build();
 
 			}else {
 				findUser.setActive("yes");
-				response = Response.ok("connected").build();
+				response = Response.ok("{\r\"response\":\"connected\"\r}").build();
 				
 			}
 		}
@@ -125,17 +125,17 @@ public class UserDao implements IUserDao{
 		
 		if(user.getEmail() == null){
 			
-			response = Response.ok("Missing email").build();
+			response = Response.ok("{\r\"response\":\"Missing email\"\r}").build();
 			
 		}else if (user.getActive() == null) {
 			
-			response = Response.ok("Missing connection status").build();
+			response = Response.ok("{\r\"response\":\"Missing connection status\"\r}").build();
 			
 		}else {
 			
 			findUser = getUserByEmail(user.getEmail());			
 			findUser.setActive(user.getActive());
-			response = Response.ok("Disconnected").build();
+			response = Response.ok("{\r\"response\":\"Disconnected\"\r}").build();
 			
 		}
 		

@@ -1,15 +1,16 @@
 package dao;
 
-import java.util.List;
+
 
 import javax.ejb.Local;
 
 
-import model.Event;
+
 
 @Local
 public interface IEventDao {
 	
-	public List<Event> getEvents(int id);
+	public String getEvents();
+	public String getEventTypeNameNbParticipations();
 
 }
