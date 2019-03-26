@@ -48,7 +48,7 @@
                 <th scope="col">Action</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="tbody_events">
             <tr>
                 <th > randonnée</th>
                 <td>11-03-2019</td>
@@ -89,8 +89,41 @@
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js" ></script>
 <script>
     $(document).ready(function() {
+        var tbody_events = document.getElementById('tbody_events');
+        var events = [
+            {
+                id: '1',
+                title: 'Football',
+                start: '2018-09-01',
+                end: '2018-10-01',
+                color: '#125478',
+                nb_participants: 26
+            },
+            {
+                id: '2',
+                title: 'BasketBall',
+                start: '2018-09-01',
+                end: '2018-10-08',
+                color: '#185478',
+                nb_participants: 87
+            }
+        ];
+        for (var i = 0; i < events.length; i++) {
+            var event = events[i];
+            tbody_events.innerHTML += '<tr>' +
+                                        '<th >'+ event.title+'</th>' +
+                                            '<td>'+ event.title+'</td>' +
+                                            '<td>'+ event.title+'</td>' +
+                                            '<td>'+ event.title+'</td>' +
+                                            '<td>' +
+                                                '<a class="col-lg-12 btn btn-outline-danger btn"> Annuler</a>' +
+                                            '</td>' +
+                                        '</th>' +
+                                    '</tr>';
+        }
         $('#events_list').DataTable();
     } );
+
 </script>
 </body>
 </html>
